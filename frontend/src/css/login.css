@@ -37,14 +37,15 @@ cafe claro2: #523f32
 
 .form-login {
   background-color: #21160f;
-  padding: 4.5rem;
+  padding: 2.5rem;
 }
 
 .form-login > form >  h1 {
     color:#e0ad89;
     font-weight: bolder;
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 2.8rem;
+    margin-top: 0.5rem; 
 }
 
 form {
@@ -52,8 +53,8 @@ form {
   flex-direction: column;
   align-items: center;
   background: #21160f;
-  width: 25rem;
-  height: 32rem;
+  width: 32rem;
+  height: 42rem;
   padding: 3rem;
   border-radius: 3rem;
   border: 0.8rem solid #e0ad89;
@@ -61,15 +62,15 @@ form {
 }
 
 .input-group {
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
-  line-height: 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 1.7rem;
 }
 
 .input-group label {
   display: block;
   color: #e0ad89;
-  margin-bottom: 4px;
+  margin-bottom: 0.6rem;
 }
 
 .input-group input {
@@ -77,12 +78,18 @@ form {
   border-radius: 1rem;
   border: 0.3rem solid #523f32;
   outline: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background-color: #3b2a1f;
   padding: 0.75rem 1rem;
   color: #e0ad89;
-  margin-bottom: 1rem;
+}
 
+.passwordinput {
+  margin-bottom: -0.6rem;
+}
+
+.userinput {
+  margin-bottom: 0.7rem;
 }
 
 .input-group input:hover {
@@ -97,7 +104,7 @@ form {
 
 .forgot {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
@@ -110,25 +117,55 @@ form {
     font-weight: bolder;
 }
 
+.registrar {
+  text-decoration: none;
+  color: var(--crema);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.registrar > a{
+    color: var(--crema);
+}
+
+.forgot > a:hover{
+    color: var(--cafe3);
+    font-weight: bolder;
+}
+
 
 .submit {
+  font-family: "Josefin Sans", sans-serif;
   background: #3b2a1f;
   border: none;
-  padding: 1rem;
   height: 4.6rem;
   border-radius: 1rem;
   color: var(--crema);
-  font-weight: 600;
-  font-size: 1.7rem;
+  font-weight: bold;
+  font-size: 2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s ease;
   width: 63%;
-  
+  margin-top: 1.7rem;
+  margin-bottom: 1rem;
+  padding: 1.8rem;
 }
 .submit:hover {
   background: var(--crema);
   color: var(--cafe)
 }
+
+.giticon{
+  height: 5rem;
+  filter: invert(100%);
+  transform: scaleX(1.07);
+
+}
+
+
 
 .info-login {
   background-color: var(--crema);
