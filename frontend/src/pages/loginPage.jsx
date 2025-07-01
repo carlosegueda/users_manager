@@ -1,4 +1,6 @@
 import "../css/Login.css";
+import Theme from "../components/Theme";
+import "../css/theme.css";
 
 export default function LoginPage() {
   return (
@@ -6,11 +8,11 @@ export default function LoginPage() {
       <div class="login">
         <div class="form-login">
           <form>
-            <h1>Users Manager</h1>
+            <h1>Inicio de Sesión</h1>
             <div class="input-group">
               <label for="user">Usuario:</label>
               <input
-              class="userinput"
+                class="userinput"
                 id="user"
                 name="user"
                 autocomplete="off"
@@ -36,16 +38,21 @@ export default function LoginPage() {
             <button class="submit" type="submit">
               Iniciar Sesión
             </button>
-            <span class="registrar">No tienes cuenta?   
+            <span class="registrar">
+              No tienes cuenta?
               <a href="/register">Regístrate</a>
             </span>
-            <a href="https://github.com/carlosegueda" target="_blank"><img src="/github-logo.png" class="giticon"/></a>
+            <a href="https://github.com/carlosegueda" target="_blank">
+              <img src="/github-logo.png" class="giticon" />
+            </a>
           </form>
         </div>
-
+        <div class="options">
+          <Theme/>
+        </div>
         <div class="info-login">
           <div class="info">
-            <h1>¿Qué es Users Manager?</h1>
+            <h1>Users Manager</h1>
             <h2>
               Aplicación web desarrollada con React, HTML, CSS, JavaScript,
               NodeJS, Express y SQL que permite la gestión de usuarios y los

@@ -4,6 +4,8 @@ import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
 import DashboardPage from "./pages/dashboardPage";
 import NotFound from "./pages/notFound";
+import "./css/theme.css";
+
 
 function App() {
   return (

@@ -9,7 +9,6 @@ cafe claro2: #523f32
 
 #root {
   min-height: 100vh;
-  background-color: #000000;
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   --cafe: #21160f;
@@ -18,46 +17,66 @@ cafe claro2: #523f32
   --cafe3: #523f32;
 }
 
+body.light-theme {
+  --background-color: #e0ad89;
+  --border-color: #21160f;
+  --font-color: #21160f;
+  --element-color: #21160f;
+  --main2: #b88e70;
+  --main3: #6e523f;
+  --filter: invert(0%);
+}
 
+body.dark-theme {
+  --background-color: #21160f;
+  --border-color: #e0ad89;
+  --font-color: #e0ad89;
+  --element-color: #e0ad89;
+  --main2: #3b2a1f;
+  --main3: #523f32;
+  --filter: invert(100%);
+}
 
 .login {
   display: flex;
   height: 100vh;
-  width: 100%;
 }
 
-.login > div {
-  flex: 1; /* ambas columnas ocupan el mismo espacio */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 11rem;
-  box-sizing: border-box;
-}
-
-.form-login {
-  background-color: #21160f;
+.options {
+  width: 6%;
   padding: 2.5rem;
 }
 
-.form-login > form >  h1 {
-    color:#e0ad89;
-    font-weight: bolder;
-    font-size: 3.5rem;
-    margin-bottom: 2.8rem;
-    margin-top: 0.5rem; 
+.login > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.form-login {
+  padding: 2.5rem;
+  width: 47%;
+}
+
+.form-login > form > h1 {
+  color: var(--font-color);
+  font-weight: bolder;
+  font-size: 3.5rem;
+  margin-bottom: 2.8rem;
+  margin-top: 0.5rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #21160f;
   width: 32rem;
   height: 42rem;
   padding: 3rem;
   border-radius: 3rem;
-  border: 0.8rem solid #e0ad89;
+  border: 0.8rem solid var(--border-color);
   box-shadow: 0rem 0rem 5rem rgba(88, 51, 25, 0.671);
 }
 
@@ -69,19 +88,19 @@ form {
 
 .input-group label {
   display: block;
-  color: #e0ad89;
+  color: var(--font-color);
   margin-bottom: 0.6rem;
 }
 
 .input-group input {
   width: 85%;
   border-radius: 1rem;
-  border: 0.3rem solid #523f32;
+  border: 0.3rem solid var(--main3);
   outline: 0;
   font-size: 1.7rem;
-  background-color: #3b2a1f;
+  background-color: var(--main2);
   padding: 0.75rem 1rem;
-  color: #e0ad89;
+  color: var(--font-color);
 }
 
 .passwordinput {
@@ -98,8 +117,8 @@ form {
 }
 
 .input-group input:focus {
-  border-color: #e0ad89;
-  background-color: var(--cafe3);
+  border-color: var(--border-color);
+  background-color: var(--main3);
 }
 
 .forgot {
@@ -108,39 +127,38 @@ form {
   margin-bottom: 2rem;
 }
 
-.forgot > a{
-    color: var(--crema);
+.forgot > a {
+  color: var(--font-color);
 }
 
-.forgot > a:hover{
-    color: var(--cafe3);
-    font-weight: bolder;
+.forgot > a:hover {
+  color: var(--font-color);
+  font-weight: bolder;
 }
 
 .registrar {
   text-decoration: none;
-  color: var(--crema);
+  color: var(--font-color);
   font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
-.registrar > a{
-    color: var(--crema);
+.registrar > a {
+  color: var(--font-color);
 }
 
-.forgot > a:hover{
-    color: var(--cafe3);
-    font-weight: bolder;
+.forgot > a:hover {
+  color: var(--font-color);
+  font-weight: bolder;
 }
-
 
 .submit {
   font-family: "Josefin Sans", sans-serif;
-  background: #3b2a1f;
+  background: var(--main2);
   border: none;
   height: 4.6rem;
   border-radius: 1rem;
-  color: var(--crema);
+  color: var(--font-color);
   font-weight: bold;
   font-size: 2rem;
   cursor: pointer;
@@ -154,47 +172,43 @@ form {
   padding: 1.8rem;
 }
 .submit:hover {
-  background: var(--crema);
-  color: var(--cafe)
+  background: var(--element-color);
+  color: var(--background-color);
 }
 
-.giticon{
+.giticon {
   height: 5rem;
-  filter: invert(100%);
+  filter: var(--filter);
   transform: scaleX(1.07);
-
 }
-
-
 
 .info-login {
-  background-color: var(--crema);
   padding: 2.5rem;
+  width: 47%;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background: var(--crema);
-  text-align:end ;
+  text-align: end;
   width: 32rem;
   height: 42rem;
   padding: 3rem;
   border-radius: 3rem;
-  border: 0.8rem solid var(--cafe);
+  border: 0.8rem solid var(--border-color);
   box-shadow: 0rem 0rem 5rem rgba(88, 51, 25, 0.671);
 }
 
 .info > h1 {
-    color: var(--cafe);
-    font-weight: bolder;
-    font-size: 4.3rem;
-    margin: 1rem;
+  color: var(--font-color);
+  font-weight: bolder;
+  font-size: 4.3rem;
+  margin: 1rem;
 }
 
 .info > h2 {
-    color: var(--cafe2);
-    font-size: 2.9rem;
-    margin: 1rem;
+  color: var(--font-color);
+  font-size: 2.9rem;
+  margin: 1rem;
 }
