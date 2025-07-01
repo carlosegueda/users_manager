@@ -1,4 +1,3 @@
-
 #root {
   min-height: 100vh;
   color: #ffffff;
@@ -7,8 +6,25 @@
   --crema: #e0ad89;
   --cafe2: #3b2a1f;
   --cafe3: #523f32;
+
+  /* Variables para font-size */
+  --font-size-h1: 3.5rem; /* PC */
+  --font-size-h1-mobile: 1em; /* móvil */
+  --font-size-h2: 2.9rem;
+  --font-size-h2-mobile: 1rem;
+  --font-size-input: 1.7rem;
+  --font-size-input-mobile: 1rem;
+  --font-size-submit: 2rem;
+  --font-size-submit-mobile: 1rem;
+  --font-size-label: 2rem;
+  --font-size-label-mobile: 1rem;
+  --font-size-info-h1: 4.3rem;
+  --font-size-info-h1-mobile: 1rem;
+  --font-size-info-h2: 2.9rem;
+  --font-size-info-h2-mobile: 1rem;
 }
 
+/* Temas */
 body.light-theme {
   --background-color: #e0ad89;
   --border-color: #21160f;
@@ -29,6 +45,7 @@ body.dark-theme {
   --filter: invert(100%);
 }
 
+/* Layout PC */
 .login {
   display: flex;
   height: 100vh;
@@ -55,7 +72,7 @@ body.dark-theme {
 .form-login > form > h1 {
   color: var(--font-color);
   font-weight: bolder;
-  font-size: 3.5rem;
+  font-size: var(--font-size-h1);
   margin-bottom: 2.8rem;
   margin-top: 0.5rem;
 }
@@ -74,7 +91,7 @@ form {
 
 .input-group {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: var(--font-size-label);
   line-height: 1.7rem;
 }
 
@@ -89,7 +106,7 @@ form {
   border-radius: 1rem;
   border: 0.3rem solid var(--main3);
   outline: 0;
-  font-size: 1.7rem;
+  font-size: var(--font-size-input);
   background-color: var(--main2);
   padding: 0.75rem 1rem;
   color: var(--font-color);
@@ -139,11 +156,6 @@ form {
   color: var(--font-color);
 }
 
-.forgot > a:hover {
-  color: var(--font-color);
-  font-weight: bolder;
-}
-
 .submit {
   font-family: "Josefin Sans", sans-serif;
   background: var(--main2);
@@ -152,7 +164,7 @@ form {
   border-radius: 1rem;
   color: var(--font-color);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: var(--font-size-submit);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -195,31 +207,42 @@ form {
 .info > h1 {
   color: var(--font-color);
   font-weight: bolder;
-  font-size: 4.3rem;
+  font-size: var(--font-size-info-h1);
   margin: 1rem;
 }
 
 .info > h2 {
   color: var(--font-color);
-  font-size: 2.9rem;
+  font-size: var(--font-size-info-h2);
   margin: 1rem;
 }
 
-/* Para pantallas pequeñas: móvil y tablets */
-@media (max-width: 768px) {
-  .login {
-    flex-direction: column; /* cambia el layout a vertical */
-    height: auto; /* que se ajuste al contenido */
+/* Media Query para móviles y tablets */
+@media (max-width: 1200px) {
+  :root {
+    /* Sobre-escribo variables de font-size para móvil */
+    --font-size-h1: var(--font-size-h1-mobile);
+    --font-size-h2: var(--font-size-h2-mobile);
+    --font-size-input: var(--font-size-input-mobile);
+    --font-size-submit: var(--font-size-submit-mobile);
+    --font-size-label: var(--font-size-label-mobile);
+    --font-size-info-h1: var(--font-size-info-h1-mobile);
+    --font-size-info-h2: var(--font-size-info-h2-mobile);
   }
 
-  .login > div, /* para los hijos directos del login (form-login e info) */
+  .login {
+    flex-direction: column; /* vertical en móvil */
+    height: auto;
+    padding: 1rem 4rem;
+  }
+
+  .login > div,
   .options {
-    width: 100% !important; /* que ocupen todo el ancho */
-    padding: 1.5rem 2rem;
+    width: 100% !important;
+    padding: 2rem;
     box-sizing: border-box;
   }
 
-  /* Ordenar: formulario arriba */
   .form-login {
     order: 1;
     width: 100% !important;
@@ -234,17 +257,15 @@ form {
     padding: 1rem 0;
   }
 
-  /* info abajo */
   .info-login {
     order: 3;
     width: 100% !important;
     padding-top: 1rem;
   }
 
-  /* Ajustes internos para formulario e info para que no se vean tan anchos */
   form {
     width: 100% !important;
-    max-width: 400px; /* ancho máximo en móvil */
+    max-width: 400px;
     height: auto !important;
   }
 
@@ -252,7 +273,6 @@ form {
     width: 100% !important;
     max-width: 400px;
     height: auto !important;
-    text-align: center; /* mejor centrado en móvil */
+    text-align: center;
   }
 }
-
