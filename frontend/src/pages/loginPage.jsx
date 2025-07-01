@@ -33,7 +33,7 @@ export default function LoginPage() {
               />
             </div>
             <span class="forgot">
-              <a href="#">Has Olvidado tu contraseña?</a>
+              <a href="/dash">Has Olvidado tu contraseña?</a>
             </span>
             <button class="submit" type="submit">
               Iniciar Sesión
