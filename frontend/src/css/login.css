@@ -9,7 +9,7 @@
 
   /* Variables para font-size */
   --font-size-h1: 3.5rem; /* PC */
-  --font-size-h1-mobile: 1em; /* móvil */
+  --font-size-h1-mobile: 1.6em; /* móvil */
   --font-size-h2: 2.9rem;
   --font-size-h2-mobile: 1rem;
   --font-size-input: 1.7rem;
@@ -218,7 +218,7 @@ form {
 }
 
 /* Media Query para móviles y tablets */
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
   :root {
     /* Sobre-escribo variables de font-size para móvil */
     --font-size-h1: var(--font-size-h1-mobile);
@@ -233,7 +233,7 @@ form {
   .login {
     flex-direction: column; /* vertical en móvil */
     height: auto;
-    padding: 1rem 4rem;
+    padding: 1rem;
   }
 
   .login > div,
@@ -246,7 +246,7 @@ form {
   .form-login {
     order: 1;
     width: 100% !important;
-    padding-bottom: 1rem;
+    padding: 0.5rem;
   }
 
   /* switch en medio */
@@ -254,7 +254,7 @@ form {
     order: 2;
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0.5rem;
   }
 
   .info-login {
@@ -271,8 +271,30 @@ form {
 
   .info {
     width: 100% !important;
-    max-width: 400px;
+    max-width: 13.5rem;
     height: auto !important;
     text-align: center;
   }
+
+  .form-login > form > h1 {
+  color: var(--font-color);
+  font-weight: bolder;
+  font-size: var(--font-size-h1-mobile);
+  margin-bottom: 2.8rem;
+  margin-top: 0.5rem;
+}
+
+.info > h1 {
+  color: var(--font-color);
+  font-weight: bolder;
+  font-size: var(--font-size-info-h1-mobile);
+  margin: 1rem;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+  font-size: var(--font-size-label-mobile);
+  line-height: 1rem;
+}
+
 }
