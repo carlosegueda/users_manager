@@ -1,4 +1,3 @@
-
 body.light-theme {
   --background-color: #e0ad89;
   --border-color: #21160f;
@@ -18,7 +17,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-
 .theme {
   position: relative;
   display: flex;
@@ -34,11 +32,10 @@ body {
   position: absolute;
   width: 4rem;
   height: 100%;
-  background-color: var(--cafe) ;
+  background-color: var(--cafe);
   border-radius: 3rem;
   cursor: pointer;
   border: 0.75rem solid var(--element-color);
-  
 }
 
 .checkbox {
@@ -83,3 +80,67 @@ body {
   box-shadow: none;
 }
 
+@media (max-width: 700px) {
+  .theme {
+    position: relative;
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 0rem 0rem 2rem rgba(88, 51, 25, 0.671);*/
+    width: 100px;
+    height: 0.7rem;
+  }
+
+  .switch-label {
+    position: absolute;
+    width: 3rem;
+    height: 100%;
+    background-color: var(--cafe);
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 0.5rem solid var(--element-color);
+  }
+
+  .checkbox {
+    position: absolute;
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .checkbox:checked ~ .slider {
+    background-color: var(--crema);
+  }
+
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 10px -4px 0px 0px var(--crema);
+    box-shadow: inset 10px -4px 0px 0px var(--crema);
+    background-color: var(--cafe);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .checkbox:checked ~ .slider::before {
+    -webkit-transform: translateY(3.7rem);
+    -ms-transform: translateY(3.7rem);
+    transform: translateY(3.7rem);
+    background-color: var(--cafe);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
