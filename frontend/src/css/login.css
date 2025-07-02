@@ -9,7 +9,7 @@
 
   /* Variables para font-size */
   --font-size-h1: 3.5rem; /* PC */
-  --font-size-h1-mobile: 1.6em; /* móvil */
+  --font-size-h1-mobile: 1.6rem; /* móvil */
   --font-size-h2: 2.9rem;
   --font-size-h2-mobile: 1rem;
   --font-size-input: 1.7rem;
@@ -17,7 +17,7 @@
   --font-size-submit: 2rem;
   --font-size-submit-mobile: 1rem;
   --font-size-label: 2rem;
-  --font-size-label-mobile: 1rem;
+  --font-size-label-mobile: 1.2rem;
   --font-size-info-h1: 4.3rem;
   --font-size-info-h1-mobile: 1rem;
   --font-size-info-h2: 2.9rem;
@@ -132,7 +132,7 @@ form {
 
 .forgot {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: var(--font-size-label);
   margin-bottom: 2rem;
 }
 
@@ -148,7 +148,7 @@ form {
 .registrar {
   text-decoration: none;
   color: var(--font-color);
-  font-size: 1.6rem;
+  font-size: var(--font-size-label);
   margin-bottom: 2rem;
 }
 
@@ -267,6 +267,10 @@ form {
     width: 100% !important;
     max-width: 400px;
     height: auto !important;
+    padding: 2rem;
+    border-radius: 3rem;
+    border: 0.5rem solid var(--border-color);
+    box-shadow: 0rem 0rem 5rem rgba(88, 51, 25, 0.671);
   }
 
   .info {
@@ -277,24 +281,80 @@ form {
   }
 
   .form-login > form > h1 {
-  color: var(--font-color);
-  font-weight: bolder;
-  font-size: var(--font-size-h1-mobile);
-  margin-bottom: 2.8rem;
-  margin-top: 0.5rem;
-}
+    color: var(--font-color);
+    font-weight: bolder;
+    font-size: var(--font-size-h1-mobile);
+    margin-bottom: 2.8rem;
+    margin-top: 0.5rem;
+  }
 
-.info > h1 {
-  color: var(--font-color);
-  font-weight: bolder;
-  font-size: var(--font-size-info-h1-mobile);
-  margin: 1rem;
-}
+  .info > h1 {
+    color: var(--font-color);
+    font-weight: bolder;
+    font-size: var(--font-size-info-h1-mobile);
+    margin: 1rem;
+  }
 
-.input-group {
-  margin-bottom: 2rem;
-  font-size: var(--font-size-label-mobile);
-  line-height: 1rem;
-}
+  .info > h2 {
+    color: var(--font-color);
+    font-size: var(--font-size-info-h2-mobile);
+    margin: 1rem;
+  }
 
+  .input-group {
+    margin-bottom: 1rem;
+    font-size: var(--font-size-label-mobile);
+    line-height: 1rem;
+  }
+
+  .input-group input {
+    width: 80%;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--main3);
+    outline: 0;
+    font-size: var(--font-size-input-mobile);
+    background-color: var(--main2);
+    padding: 0.75rem 1rem;
+    color: var(--font-color);
+  }
+
+  .forgot {
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .submit {
+    font-family: "Josefin Sans", sans-serif;
+    background: var(--main2);
+    border: none;
+    height: 1rem;
+    border-radius: 1rem;
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: var(--font-size-submit-mobile);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+  }
+
+  .registrar {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .giticon {
+    height: 3rem;
+    filter: var(--filter);
+    transform: scaleX(1.07);
+  }
 }
