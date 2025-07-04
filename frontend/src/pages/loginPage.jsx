@@ -7,7 +7,7 @@ export default function LoginPage() {
     <>
       <div class="login">
         <div class="form-login">
-          <form>
+          <form class="form-log">
             <h1>Inicio de Sesión</h1>
             <div class="input-group">
               <label for="user">Usuario:</label>

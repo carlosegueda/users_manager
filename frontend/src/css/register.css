@@ -1,0 +1,194 @@
+#root {
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  --cafe: #21160f;
+  --crema: #e0ad89;
+  --cafe2: #3b2a1f;
+  --cafe3: #523f32;
+
+  /* Variables para font-size */
+  --font-size-h1: 3rem; /* PC */
+  --font-size-h1-mobile: 1.6rem; /* móvil */
+  --font-size-h2: 2.9rem;
+  --font-size-h2-mobile: 1rem;
+  --font-size-input: 1.5rem;
+  --font-size-input-mobile: 1rem;
+  --font-size-submit: 2rem;
+  --font-size-submit-mobile: 1rem;
+  --font-size-label: 1.7rem;
+  --font-size-label-mobile: 1.2rem;
+  --font-size-info-h1: 4.7rem;
+  --font-size-info-h1-mobile: 1rem;
+  --font-size-info-h1I-mobile: 2.2rem;
+  --font-size-info-h2: 2.9rem;
+  --font-size-info-h2-mobile: 1.5rem;
+}
+
+/* Temas */
+body.light-theme {
+  --background-color: #e0ad89;
+  --border-color: #21160f;
+  --font-color: #21160f;
+  --element-color: #21160f;
+  --main2: #b88e70;
+  --main3: #6e523f;
+  --filter: invert(0%);
+}
+
+body.dark-theme {
+  --background-color: #21160f;
+  --border-color: #e0ad89;
+  --font-color: #e0ad89;
+  --element-color: #e0ad89;
+  --main2: #3b2a1f;
+  --main3: #523f32;
+  --filter: invert(100%);
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.register > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.register-form {
+  padding: 0rem;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  width: 85rem;
+  height: 42rem;
+  padding: 3rem;
+  gap: 2rem;
+  border-radius: 3rem;
+  border: 0.8rem solid var(--border-color);
+  box-shadow: 0rem 0rem 5rem rgba(88, 51, 25, 0.671);
+}
+
+form > h1 {
+  color: var(--font-color);
+  font-weight: bolder;
+  font-size: var(--font-size-h1);
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.columnas {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+.columnas > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+
+
+.input-group2 {
+  margin-bottom: 2rem;
+  font-size: var(--font-size-label);
+  line-height: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+.input-group2 label {
+  display: block;
+  color: var(--font-color);
+  margin-bottom: 0.6rem;
+}
+
+.input-group2 input {
+  width: 95%;
+  border-radius: 1rem;
+  border: 0.3rem solid var(--main3);
+  outline: 0;
+  font-size: var(--font-size-input);
+  background-color: var(--main2);
+  padding: 0.75rem 1rem;
+  color: var(--font-color);
+}
+
+.input-group2 input:hover {
+  border-color: var(--cafe3);
+  background-color: var(--cafe3);
+}
+
+.input-group2 input:focus {
+  border-color: var(--border-color);
+  background-color: var(--main3);
+}
+
+
+.input-group2 select {
+  width: 100%;
+  border-radius: 1rem;
+  border: 0.3rem solid var(--main3);
+  outline: 0;
+  font-size: var(--font-size-input);
+  background-color: var(--main2);
+  padding: 0.75rem 1rem;
+  color: var(--font-color);
+}
+
+.input-group2 select:hover {
+  border-color: var(--cafe3);
+  background-color: var(--cafe3);
+}
+
+.input-group2 select:focus {
+  border-color: var(--border-color);
+  background-color: var(--main3);
+}
+
+.submit2 {
+  font-family: "Josefin Sans", sans-serif;
+  background: var(--main2);
+  border: none;
+  height: 4rem;
+  border-radius: 1rem;
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: var(--font-size-submit);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  width: 63%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.8rem;
+}
+.submit2:hover {
+  background: var(--element-color);
+  color: var(--background-color);
+}
